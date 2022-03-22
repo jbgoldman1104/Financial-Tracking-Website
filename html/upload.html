@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "_head.html"}}
+{{template "_menu.html"}}
+<body>    
+    <div class="container">
+        <section class="card">
+            <div>
+                {{.mensagem}}
+                <table class="table table-striped table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Arquivo</th>
+                            <th>Tamanho (Kb)</th>
+                            <th>Qtd. Linhas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{.arquivo}}</td>
+                            <td>{{.tamaho}}</td>
+                            <td>{{.quantidadeLinhas}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="card">
+            <div class="mb-3">
+                <h1>Importações Realizadas</h1>
+                <table class="table table-striped table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Data Transações</th>
+                            <th>Data Importação</th>
+                            <th>Usuário Responsável</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .transactionList}}
+                        <tr>
+                            <td>{{.DataTransacao}}</td>
+                            <td>{{.DataImportacao}}</td>
+                            <td>{{.NomeUsuario}}</td>
+                            <td><a href="/importdetail?id={{.ID}}" class="btn btn-info">Detalhar</a></td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

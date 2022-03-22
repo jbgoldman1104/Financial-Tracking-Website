@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "_head.html"}}
+{{template "_menu.html"}}
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Sistema de Analise de Transações Financeiras</h1>
+                <h2 class="lead">Como essa aplicação é para fins didáticos, o usuário default para navegação é admin@admin.com e a senha é 123999</h2>
+                <p class="lead">Login</p>
+            </div>
+        </div>
+        {{if .content}}
+          <div class="notification is-danger is-light">
+            {{.content}}
+          </div>
+        {{end}}
+        <form method="POST" action="/login">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="nome">Email:</label>
+                        <input type="text" name="email" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="descricao">Senha:</label>
+                        <input type="text" name="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" value="salvar" class="btn btn-success">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "_head.html"}}
+{{template "_menu.html"}}
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Sistema de Analise de Transações Financeiras</h1>
+                <p class="lead">Analise de Transações Financeiras</p>
+            </div>
+        </div>
+        {{if .content}}
+          <div class="notification is-danger is-light">
+            <!-- {{.content}} -->
+            <h2>TESTE</h2>
+          </div>
+        {{end}}
+        <form method="POST" action="/report">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="nome">Selecione o mês para analisar transações:</label>
+                        <select class="form-select" name="month">
+                            <option value="202201">Janeiro 2022</option>
+                            <option value="202202">Fevereiro 2022</option>
+                            <option value="202203">Março 2022</option>
+                            <option value="202204">Abril 2022</option>
+                            <option value="202205">Maio 2022</option>
+                            <option value="202206">Junho 2022</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" value="analise" class="btn btn-primary">Realizar Análise</button>
+        </form>
+    </div>
+    <br/>
+    <div class="container">
+        {{if .transacaoSuspeita}}
+        <section class="card">
+            <div class="mb-3">
+                <h1>Transações Suspeitas</h1>
+                <table class="table table-striped table-hover mb-0" border="1">
+                    <thead>
+                        <tr>
+                            <td colspan="3"><strong>ORIGEM</strong></td>
+                            <td colspan="3"><strong>DESTINO</strong></td>
+                            <td rowspan="2"><strong>VALOR</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>BANCO</strong></td>
+                            <td><strong>AG&Ecirc;NCIA</strong></td>
+                            <td><strong>CONTA</strong></td>
+                            <td><strong>BANCO</strong></td>
+                            <td><strong>AG&Ecirc;NCIA</strong></td>
+                            <td><strong>CONTA</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .transacaoSuspeita}}
+                        <tr>
+                            <td>{{.BancoOrigem}}</td>
+                            <td>{{.AgenciaOrigem}}</td>
+                            <td>{{.ContaOrigem}}</td>
+                            <td>{{.BancoDestino}}</td>
+                            <td>{{.AgenciaDestino}}</td>
+                            <td>{{.ContaDestino}}</td>
+                            <td>R$ {{.ValorTransacao}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    {{end}}
+    </div>
+    <br/>
+    <div class="container">
+        {{if .contaSuspeita}}
+        <section class="card">
+            <div class="mb-3">
+                <h1>Contas Suspeitas</h1>
+                <table class="table table-striped table-hover mb-0" border="1">
+                    <thead>
+                        <tr>
+                            <td><strong>BANCO</strong></td>
+                            <td><strong>AG&Ecirc;NCIA</strong></td>
+                            <td><strong>CONTA</strong></td>
+                            <td><strong>VALOR MOVIMENTADO</strong></td>
+                            <td><strong>TIPO TRANSAÇÃO</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .contaSuspeita}}
+                        <tr>
+                            <td>{{.Banco}}</td>
+                            <td>{{.Agencia}}</td>
+                            <td>{{.Conta}}</td>
+                            <td>{{.ValorMovimentacao}}</td>
+                            <td>{{.TipoTransacao}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+         {{end}}
+    </div>
+    <div class="container">
+        {{if .agenciaSuspeita}}
+        <section class="card">
+            <div class="mb-3">
+                <h1>Contas Suspeitas</h1>
+                <table class="table table-striped table-hover mb-0" border="1">
+                    <thead>
+                        <tr>
+                            <td><strong>BANCO</strong></td>
+                            <td><strong>AG&Ecirc;NCIA</strong></td>
+                            <td><strong>VALOR MOVIMENTADO</strong></td>
+                            <td><strong>TIPO TRANSAÇÃO</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .agenciaSuspeita}}
+                        <tr>
+                            <td>{{.Banco}}</td>
+                            <td>{{.Agencia}}</td>
+                            <td>{{.ValorMovimentacao}}</td>
+                            <td>{{.TipoTransacao}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+         {{end}}
+    </div>
+</body>
+
+</html>

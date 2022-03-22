@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transacoes>
+  <transacao>
+    <origem>
+      <banco>BANCO DO BRASIL</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>8000</valor>
+    <data>2022-01-02T07:30:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO SANTANDER</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>210</valor>
+    <data>2022-01-02T08:12:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO SANTANDER</banco>
+      <agencia>0001</agencia>
+      <conta>00002-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>79800.22</valor>
+    <data>2022-01-02T08:44:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO SANTANDER</banco>
+      <agencia>0001</agencia>
+      <conta>00002-1</conta>
+    </destino>
+    <valor>11.50</valor>
+    <data>2022-01-02T12:32:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO BANRISUL</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>100</valor>
+    <data>2022-01-02T16:30:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO ITAU</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>19000.50</valor>
+    <data>2022-01-02T16:55:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO ITAU</banco>
+      <agencia>0001</agencia>
+      <conta>00002-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>1000</valor>
+    <data>2022-01-02T19:30:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>NUBANK</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>2000</valor>
+    <data>2022-01-02T19:34:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>BANCO INTER</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>300</valor>
+    <data>2022-01-02T20:30:00</data>
+  </transacao>
+  <transacao>
+    <origem>
+      <banco>CAIXA ECONOMICA FEDERAL</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </origem>
+    <destino>
+      <banco>BANCO BRADESCO</banco>
+      <agencia>0001</agencia>
+      <conta>00001-1</conta>
+    </destino>
+    <valor>900</valor>
+    <data>2022-01-02T22:30:00</data>
+  </transacao>
+</transacoes>

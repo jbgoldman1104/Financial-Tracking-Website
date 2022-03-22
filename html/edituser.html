@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{{template "_head.html"}}
+{{template "_menu.html"}}
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-5">Edição de Usuário</h1>
+                <p class="lead">Insira os detalhes</p>
+            </div>
+        </div>
+        <form method="POST" action="updateuser">
+            <input type="hidden" name="id" value="{{.id}}">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" class="form-control" value="{{.nome}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <label for="descricao">e-mail:</label>
+                        <input type="text" name="email" class="form-control" value="{{.email}}">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" value="salvar" class="btn btn-success">Salvar</button>
+            <a class="btn btn-info" href="/user">Voltar</a>
+        </form>
+    </div>
+</body>
+
+</html>
