@@ -1,4 +1,3 @@
-module github.com/marcio-olmedo-cavalini/financial-transactions-go-webapp
 
 go 1.17
 
