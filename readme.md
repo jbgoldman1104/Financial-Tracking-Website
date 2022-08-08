@@ -1,4 +1,3 @@
-# financial-transactions-go-webapp
 
 ## Objective
 >Web application to analyse and investigate financial transactions. 
