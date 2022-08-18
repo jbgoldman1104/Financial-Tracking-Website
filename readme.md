@@ -8,6 +8,17 @@ Project created by AluraChallenge Backend 3 #alurachallengebackend3
 ## Requeriments
 
 1) Go lang >= 1.17.7
+2) Docker
+3) Docker compose
+
+## Development setup
+1) Clone project from github
+2) Download project dependencies:
+```
+go mod download
+```
+3) Start postgresql from a docker image:
+```
 docker compose up
 ```
 
