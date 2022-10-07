@@ -1,3 +1,4 @@
+package main
 
 import (
 	"github.com/marcio-olmedo-cavalini/financial-transactions-go-webapp/database"
