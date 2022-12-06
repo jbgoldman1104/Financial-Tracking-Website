@@ -3,12 +3,6 @@
 ## Objective
 >Web application to analyse and investigate financial transactions. 
 Developed using Go Lang. 
-Project created by AluraChallenge Backend 3 #alurachallengebackend3
-
-## Requeriments
-
-1) Go lang >= 1.17.7
-2) Docker
 3) Docker compose
 
 ## Development setup
